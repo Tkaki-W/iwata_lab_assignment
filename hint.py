@@ -1,9 +1,8 @@
 class Hint:
     input = 0
-    def __init__(self, input, correct, count):
+    def __init__(self, input, correct):
         self.input = input
         self.correct = correct
-        self.count = count
     
     def range(self):
         i = 0
@@ -17,11 +16,15 @@ class Hint:
         
     def multiple(self):
         n = 0
+        list =[]
         for n in range(2,32):
             if self.correct % n == 0:
-                print(f"求める数は{n}の倍数です")
-                break
-        print(f"求める数は素数です")
+                list.append(n)
+        print("求める数は", end="")
+        for i in list:
+            print(f"{i}  ", end="")
+        print("の倍数です")
+        #print(f"求める数は素数です")
         
 
 
