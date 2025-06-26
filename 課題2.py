@@ -26,6 +26,11 @@ count = 0
 correct = random.randint(100, 999)
 
 while True:
-    '''int型にしないと判定できない'''
-    answer = int(input("３桁の文字列を入力してください: "))
-    check(answer, correct)
+    if  count < 9:
+        '''int型にしないと判定できない'''
+        answer = int(input("３桁の文字列を入力してください: "))
+        check(answer, correct)
+    else:
+        print("解答回数制限を越えました")
+        break
+    
