@@ -5,7 +5,7 @@ from hint import Hint
     
 def hint_output(answer, correct, count):
     "ヒントが呼び出されるとインスタンス生成"
-    instance1 = Hint(answer, correct)
+    instance1 = Hint(answer, correct, count)
     if count == 1:
         instance1.range()
     elif count == 2:
@@ -22,8 +22,8 @@ def check(A, B):
         hint_output(answer, correct, count)
 
 count = 0
-correct = 200
-#random.randint(100, 999)
+correct = random.randint(100, 999)
+print(correct)
 
 while True:
     print(count)
